@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+:root {
+    --success-color: #008000;
+    --warning-color: #ffa500;
+    --error-color: #ff0000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    height: 100vh;
+    background-color: #cccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 0 10px;
+    color: white;
+}
+
+.wrapper button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.wrapper .success {
+    background-color: var(--success-color);
+}
+
+.wrapper .warning {
+    background-color: var(--warning-color);
+}
+
+.wrapper .error {
+    background-color: var(--error-color);
+}
+
+.toasts {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+}
+
+.toast {
+    position: relative;
+    margin: 10px 0px;
+    border-radius: 2px;
+    padding: 20px 30px;
+    animation: slide_show 1s ease forwards;
+}
+
+.toast.success {
+    background-color: rgba(0, 128, 0, 0.4);
+    border-left: 4px solid var(--success-color);
+
+}
+
+.toast.warning {
+    background-color: rgb(255, 165, 0, 0.4);
+    border-left: 4px solid var(--warning-color);
+
+}
+
+.toast.error {
+    background-color: rgb(255, 0, 0, 0.4);
+    border-left: 4px solid var(--error-color);
+}
+
+.countdown {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: countdown 4s linear forwards;
+}
+
+.success .countdown {
+    border-bottom: 4px solid #008000;
+}
+
+.warning .countdown {
+    border-bottom: 4px solid var(--warning-color);
+}
+
+.error .countdown {
+    border-bottom: 4px solid var(--error-color);
+}
+@keyframes countdown {
+    20% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes slide_show {
+    0% {
+        transform: translateX(100%);
+    }
+
+    40% {
+        transform: translateX(-10%);
+    }
+
+    80% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes slide_hide {
+    0% {
+        transform: translateX(-10px);
+    }
+    
+    40% {
+        transform: translateX(0);
+    }
+    
+    80% {
+        transform: translateX(-10%);
+    }
+    
+    100% {
+        transform: translateX(120%);
+    }
+}

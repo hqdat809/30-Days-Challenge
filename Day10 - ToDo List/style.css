@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient( to right, yellow, green);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid #dadada;
+}
+
+.wrapper {
+    margin: 100px auto;
+    width: 400px;
+    border-radius: 5px;
+    background-color: white;
+    overflow:hidden ;
+}
+
+.wrapper input {
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: #5e5353;
+}
+
+form button {
+    margin: 12px 20px;
+    padding: 5px 15px;
+    font-size:18px;
+    border-radius: 5px;
+    border: none;
+    outline:none;
+    color: white;
+    background-color: yellowgreen;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+.wrapper li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    list-style: none;
+    font-size: 25px;
+    border-bottom: 1px solid #dadada;
+}
+
+.wrapper li:hover {
+    cursor: pointer;
+}
+
+.wrapper li:hover i{
+    display: block;
+    cursor: pointer;
+}
+
+.wrapper li i {
+    display: none;
+    color: #adadad;
+}
+
+li span {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	padding-right: 10px;
+}
+
+.completed span {
+    color: #b6b6b6;
+	text-decoration: line-through;
+}
+
+
+

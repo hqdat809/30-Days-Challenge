@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dadada;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.wrapper {
+    width: 1200px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img__slide {
+    width: 23%;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.img__slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+
+.img__slide img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.gallery {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+.gallery__image {
+    height: 70%;
+    width: 70%;
+    margin: auto auto;
+}
+
+.gallery__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery__close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    padding: 15px 20px;
+}
+
+.gallery__close i {
+    font-size: 30px;
+}
+
+.gallery__close i:hover {
+    cursor: pointer;
+}
+
+i {
+    color: white;
+}
+
+.gallery__next-btn {
+    position: absolute;
+    right: 20px;
+}
+
+
+.gallery__prev-btn {
+    position: absolute;
+    left: 20px;
+}
+
+.gallery__next-btn i, .gallery__prev-btn i {
+    font-size: 30px;
+}
+
+.gallery__next-btn i:hover, .gallery__prev-btn i:hover {
+    cursor: pointer;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
